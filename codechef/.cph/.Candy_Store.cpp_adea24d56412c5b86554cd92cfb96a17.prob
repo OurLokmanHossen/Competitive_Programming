@@ -1,0 +1,1 @@
+{"name":"Local: Candy_Store","url":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\Candy_Store.cpp","tests":[{"id":1741427328589,"input":"4\n3 1\n5 5\n4 7\n2 3","output":"1\n5\n10\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\Candy_Store.cpp","group":"local","local":true}
