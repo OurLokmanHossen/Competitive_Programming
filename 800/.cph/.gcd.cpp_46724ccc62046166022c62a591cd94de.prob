@@ -1,0 +1,1 @@
+{"name":"Local: gcd","url":"c:\\Users\\User\\Desktop\\codeforces\\800\\gcd.cpp","tests":[{"id":1741614735926,"input":"7\n10\n7\n21\n100\n2\n1000\n6\n","output":"5\n6\n18\n98\n1\n750\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\codeforces\\800\\gcd.cpp","group":"local","local":true}
