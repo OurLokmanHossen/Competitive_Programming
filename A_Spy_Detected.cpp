@@ -16,12 +16,10 @@ int main(){
 
          if(a[i] != a[i+1])
          {
-            cout << i << endl;
+            cout << a[i] << endl;
          }
     }
   }
-
-
 
     return 0;
 }
