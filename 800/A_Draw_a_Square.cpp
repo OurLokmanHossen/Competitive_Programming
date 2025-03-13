@@ -13,7 +13,7 @@ int main(){
 
         cin >> l >> r >> d >> u;
 
-        if(l==r && d == u && l == d )
+        if(l==r && d == u && l == d ) // l=r=u=d then it will be a square
         {
             cout << "Yes" << endl;
         }
@@ -24,3 +24,5 @@ int main(){
 
     return 0;
 }
+
+// tc : O(1) & sc : O(1)
