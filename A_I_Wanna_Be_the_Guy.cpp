@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+    
     int f, p, q, arr[200], count = 0;
     cin >> f >> p;
 
