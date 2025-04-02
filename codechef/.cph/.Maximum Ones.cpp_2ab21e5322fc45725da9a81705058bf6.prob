@@ -1,0 +1,1 @@
+{"name":"Local: Maximum Ones","url":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\Maximum Ones.cpp","tests":[{"id":1743606653019,"input":"3\n3 1\n101\n3 1\n001\n3 2\n001","output":"3\n2\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\Maximum Ones.cpp","group":"local","local":true}
