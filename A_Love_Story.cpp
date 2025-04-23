@@ -1,19 +1,23 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t; cin >> t;
+int main(){
 
-    while (t--) {
+    int t ; cin >> t;
+    while(t--){
         string s; cin >> s;
-        string c = "codeforces";
-        int ans = 0;  
+        string b = "codeforces";
 
-        for (int i = 0; i < 10; i++) 
+        int dif = 0;
+
+        for(int i = 0 ; i < s.size(); i++)
         {
-            if (s[i] != c[i]) ans++;
+            if(s[i] != b[i] )
+            dif++;
         }
-        cout << ans << endl;
+        cout << dif << endl;
     }
+
     return 0;
 }

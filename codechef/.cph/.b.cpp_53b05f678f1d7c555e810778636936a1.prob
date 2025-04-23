@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\b.cpp","tests":[{"id":1744814553679,"input":"3\n8\nGBGBBBBG\n7\nBGGGGGG\n4\nGBBG","output":"7\n1\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\codeforces\\codechef\\b.cpp","group":"local","local":true}
