@@ -4,16 +4,20 @@ using namespace std;
 
 int main(){
        
-    int t ; cin >> t;
-    while (t--){
-        int n; cin >> n;
-        string s; cin >> s;
-        char maxChar = 'a';
-        for(int i= 0 ; i<n ; i++ )
-        {  
-            maxChar = max(maxChar, s[i]);
-        }
-        cout <<( maxChar - 'a' + 1) << endl; //need ascii value to get the number of the character.
+   int t; cin >> t;
+   while(t--)
+   {
+    int n; cin >> n;
+    string s; cin >> s;
+
+   char maxChar = 'a';
+    for(int i = 0; i<s.size(); i++)
+    {
+      maxChar = max(maxChar,s[i]);
     }
+
+    cout << maxChar - 'a' + 1 << endl; // z= 25 + 1 = 26 (need to know 26 char)
+
+   }\
     return 0;
 }
