@@ -4,23 +4,22 @@ using namespace std;
 
 int main(){
 
-    int n , m; cin >> n >> m;
+    int n, m; cin >> n >>  m;
 
-    int days = 0; 
+    int day = 0;
 
-    while(n > 0)
+    while(n)
+    {
+        n--;
+        day++;
+
+        if(day % m == 0)
         {
-            days++;
-            n--;
-            
-        if(days % m ==0)
-        {
-        n++;
+            n++;
         }
-
     }
 
-    cout << days << endl;
+    cout << day << endl;
 
     return 0;
 }
