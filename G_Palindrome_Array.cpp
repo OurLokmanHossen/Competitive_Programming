@@ -4,29 +4,27 @@ using namespace std;
 
 int main(){
 
-    int n ; cin >> n;
-   
-    vector<int> v(n);
-    for(int i = 0; i<n; i++) cin >> v[i];
+    int n; cin >> n;
+    int a[n];
 
-   vector<int> ans = v; // for copying the v vector into ans
-   reverse(ans.begin(),ans.end());
+    for(int i = 0; i<n; i++)
+    {
+        cin >> a[i];
+    }
 
-    if(ans == v) cout << "YES" << endl;
+    bool isPalindrome = true;
+
+    for(int i = 0; i<n; i++)
+    {
+        if(a[i] != a[n-1-i])
+        {
+            isPalindrome = false;
+        }
+    }
+
+    if(isPalindrome) cout << "YES" << endl;
     else cout << "NO" << endl;
+
 
     return 0;
 }
-
-// bool isPalimdrome = true;
-    // for(int i = 0; i<n/2 ; i++)
-    // {
-    //   if(a[i] != a[n-1-i])
-    //   {
-    //    isPalimdrome = false;
-    //    break;
-    //   }
-    // }
-
-    // if(isPalimdrome) cout << "YES" << endl;
-    // else cout << "NO" << endl;

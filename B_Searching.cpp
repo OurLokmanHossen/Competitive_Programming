@@ -13,23 +13,20 @@ int main(){
         cin >> ar[i];
     }
 
-    int x;
-    cin >> x;
+    int x; cin >> x;
 
-    int index = -1;
-
-    for(int i = 0; i< n; i++)
+    for(int i = 0; i<n ; i++)
     {
         if(ar[i] == x)
         {
-
-            index = i;
-            break;
+            cout << i << endl;
+            return 0;
         }
-        
     }
 
-    cout << index << endl;
+    cout << -1 << endl;
+
+
 
     return 0;
 }
