@@ -1,32 +1,25 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
 int main(){
 
-    int n; cin >> n;
+    string s; cin >> s;
 
-    int digit , rev = 0, original = n;
+    bool flag = true;
 
-    while(n > 0 ){
+   int n = s.size();
 
-            int digit = n % 10;
-            rev = rev * 10 + digit;
-            n /=10;
+    for(int i = 0; i<n/2; i++)
+    {
+        if(s[i] != s[n-1-i])
+        {
+            flag = false;
+            break;
+        }
     }
 
-    //    if(rev == original) 
-    //    cout << rev << "\nYES" << endl;
-    //    else 
-    //    cout << rev << "\nNO" << endl;
-
-    cout << rev << endl;
-
-    if(rev == original)
-    cout << "YES" << endl;
-    else 
-    cout << "NO"  << endl;
+    if(flag) cout << "YES" << endl;
+    else cout << "NO" << endl;
 
     return 0;
 }
-

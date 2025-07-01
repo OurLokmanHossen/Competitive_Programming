@@ -1,16 +1,25 @@
-#include <iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main(){
     string s; cin >> s;
+    int n = s.size();
 
-    set<char> uni_char(s.begin(), s.end());
+   int freq[256] = {0}, uniElement = 0;
 
-    if (uni_char.size() % 2 == 0)
-        cout << "CHAT WITH HER!" << endl;
-    else
-        cout << "IGNORE HIM!" << endl;
+    // for(char c : s)
+    // {
+    //     if(freq[c] == 0) uniElement++;
+    //     freq[c]++;
+    // }
+
+    for(int i = 0; i<n; i++){
+        if(freq[s[i]] == 0) uniElement++;
+        freq[s[i]]++;
+    }
+
+    if(uniElement % 2 == 0) cout << "CHAT WITH HER!" << endl;
+    else cout << "IGNORE HIM!" << endl;
 
     return 0;
 }
