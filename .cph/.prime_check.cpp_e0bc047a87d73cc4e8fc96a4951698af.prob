@@ -1,0 +1,1 @@
+{"name":"Local: prime_check","url":"c:\\Users\\User\\Desktop\\Competitive Programming\\prime_check.cpp","tests":[{"id":1755248271526,"input":"20 3\n1\n15\n7","output":"NO\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\Competitive Programming\\prime_check.cpp","group":"local","local":true}

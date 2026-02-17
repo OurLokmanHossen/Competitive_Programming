@@ -1,42 +1,40 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
-int main(){
+int main() {
+    fastio();
+    
+    int t ; cin >> t;
+    while (t--) {
 
-    int t; cin >> t;
+        int n; cin >> n;
+        vector<int> a(n), b(n);
 
-    while(t--)
-    {
-         int n ; cin >> n;
-
-    int a[n];
-
-    int sum1 = 0, sum2 = 0;
-
-    for(int i = 0 ; i<n ; i++)
-    {
-        cin >> a[i];
-
-        if(a[i] % 2 == 1) 
+        for(int i = 0; i<n; i++)
         {
-          sum1 += a[i];
+            cin >> a[i];
+            b[i] = a[i];
         }
 
-        else if(a[i] %2 == 0)
+        sort(b.begin(),b.end());
+
+        bool found = false;
+
+        for(int i = 0; i<n; i++)
         {
-            sum2 += a[i];
+            if(a[i] != b[i]) 
+            {
+                found = true;
+                break;
+            }
         }
-    }
 
-    if(sum1 % 2 == 0 && sum2 % 2 == 0)
-    {
-        cout << "YES" << endl;
+        if(found) cout << "YES" << endl;
+        else cout << "NO" << endl;
+        
     }
-
-    else cout << "NO" << endl;
-    }
-   
-
+    
     return 0;
 }

@@ -4,7 +4,27 @@ using namespace std;
 
 int main(){
 
-    int 
+    int t; cin >> t;
+
+    while(t--)
+    {
+        string s; cin >> s;
+
+        int n = s.size();
+
+        cout << s[0];
+
+        for(int i = 1; i<n-1; i+=2)
+        {
+            cout << s[i];
+        }
+
+        cout << s[n-1];
+
+        cout << endl;
+
+        
+    }
 
 
 

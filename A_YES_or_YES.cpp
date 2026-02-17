@@ -1,24 +1,33 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
-int main(){
+int main() {
+    fastio();
+    
+    int t ; cin >> t;
+    while (t--) {
 
-    int t;
-    cin >> t;
+      string s; cin >> s;
 
-    while(t--)
-  {
-    string str;
-    cin >> str;
+      int n = s.size();
 
-    if (
-    (str[0] == 'Y' || str[0] == 'y') && 
-    (str[1] == 'E' || str[1] == 'e') && 
-    (str[2] == 'S' || str[2] == 's'))
-    cout << "YES" << endl;
-    else 
-    cout << "NO" << endl;
-  }
+      int cnty = 0, cntn = 0;
+
+      for(int i = 0; i<n; i++)
+      {
+          if(s[i] == 'Y' ) cnty++;
+          else cntn++;
+      }
+
+      if(cntn == n ) { cout << "YES" << endl; continue; }
+
+      if(cnty == 1) cout << "YES" << endl;
+      else cout << "NO" << endl;
+
+    }
+
+     
     return 0;
 }

@@ -15,15 +15,15 @@ int main(){
     caseNo++;
 
     int i = 0; 
-    int rem = 0;
+    long long rem = 0;
 
     if(a[0] == '-') i = 1;
 
     for(; i<a.size(); i++)
     {
-        int num = a[i] - '0';
+        int num = a[i] - '0'; 
         rem = rem * 10 + num;
-        rem = rem % b;
+        rem = rem % abs(b);
     }
 
     if(rem == 0) {

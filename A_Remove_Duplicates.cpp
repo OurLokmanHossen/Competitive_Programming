@@ -6,24 +6,29 @@ int main(){
 
     int n; cin >> n;
 
-    int a[n];
+    vector<int> a(n), ans;
 
     for(int i = 0; i<n; i++) cin >> a[i];
 
-    bool flag = false;
+    set<int> st;
 
-    for(int i = 0 ; i<n; i++)
+    for(int i = n-1; i>= 0; i--)
     {
-        for(int j = 0; j<n; j++)
+        if(st.count(a[i]) == 0 )
         {
-            if(a[i] == a[j])
-            {
-                flag = true;
-            }
+            ans.push_back(a[i]);
+            st.insert(a[i]);
         }
     }
 
-    
+    reverse(ans.begin(), ans.end());
+
+    cout << ans.size() << endl;
+
+    for(auto it : ans) cout << it << " ";
+    cout << endl;
+
+
     
     return 0;
 }

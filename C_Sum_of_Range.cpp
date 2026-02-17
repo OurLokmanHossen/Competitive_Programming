@@ -1,27 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
 int main() {
+    fastio();
+    
+   ll a, b; cin >> a >> b;
 
-    long long a, b;
+   if(a>b) swap(a,b);
 
-    cin >> a >> b;
+  ll even, beven, aeven, sum1, sum2 ;
 
-    if (a > b) 
-    {
-  swap(a, b);
-    }
+   sum1 = (b * (b + 1)) / 2 ;
 
-    long long sum = 0, even = 0, odd = 0;
+   sum2 = sum1 - (a * (a - 1))/ 2;
 
-    for (long long i = a; i <= b; ++i) 
-    {
-        sum += i;
+   beven = b / 2;
 
-        if (i % 2 == 0) even += i;
-        
-        else odd += i;
-    }
+   aeven = (a-1) / 2;
 
-    cout << sum << "\n" << even << "\n" << odd << "\n";
+   even = (beven * (beven + 1)) - (aeven * (aeven + 1));
+
+   cout << sum2 << endl << even << endl;
+
+    return 0;
 }

@@ -9,16 +9,13 @@ int main(){
     {
 
         long long n ; cin >> n;
-        
         while(n % 2 == 0)
         {
-            n /= 2;
+           n = n / 2;
         }
 
-        if(n > 1)
-        cout << "YES" << endl;
-        else  cout << "NO" << endl;
-        
+        if(n == 1) cout << "NO" << endl;
+        else cout << "YES" << endl;  
    
  }
 

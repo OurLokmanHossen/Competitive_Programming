@@ -1,36 +1,45 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
-int main(){
-
-    int t; cin >> t;
-    while(t--){
-        long long n; cin >> n;
+int main() {
+    fastio();
     
+    int t ; cin >> t;
+    while (t--) {
 
-        map <int , int > freq;
+        int n; cin >> n;
+        vector<int> v(n);
 
-        int ans = -1;
+        for(int i = 0 ; i<n; i++) cin >> v[i];
 
-        int x; 
+        sort(v.begin(), v.end());
 
-        for(int i = 0; i< n; i++)
+        bool found = false;
+
+        for(int i = 0; i<n;)
         {
-    
-            cin >> x;
-            freq[x]++;
+            int x = v[i];
 
-            if(freq[x] == 3 ) 
-        {
-            ans = x;
+            int ub = upper_bound(v.begin(), v.end(),x) - v.begin();
+
+            int cnt = ub - i;
+
+            if(cnt >= 3) 
+            {
+                found = true;
+                cout << x << endl;
+                break;
+            }
+
+            i = ub;
         }
 
-        }
-
-        cout << ans << endl;
-
+        if(!found) cout << -1 << endl;
+ 
+        
     }
-
+    
     return 0;
 }

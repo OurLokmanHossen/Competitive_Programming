@@ -1,1 +1,1 @@
-abs(row-3)
+ // cin >> p.first >> p.second;

@@ -1,26 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
 int main() {
-    string s; cin >> s;
+    fastio();
+    
+        int n; cin >> n;
 
-    int cnt = 1;   // Start counting from 1
-    for (int i = 1; i < s.size(); i++) 
-    {
-        if (s[i] == s[i-1]) 
+        map<string , int> freq;
+
+        for(int i = 0; i<n; i++)
         {
-             cnt++;
-            if (cnt == 7)
-             {
-                cout << "YES" << endl;
-                return 0;
-            }
-        } 
-        else 
-        {
-            cnt = 1; 
+            string s; cin >> s;
+
+            freq[s]++;
         }
-    }
 
-    cout << "NO" << endl;
+        string win;
+        int maxG = 0;
+
+        for(auto it : freq)
+        {
+            if(it.second > maxG)
+            {
+                maxG = it.second;
+                win = it.first;
+            }
+        }
+
+        cout << win;
+        
+    return 0;
 }

@@ -14,9 +14,11 @@ int main(){
 
        if(mp[s]==0) cout << "OK" << endl;
        else {
-        cout << s << mp[s] << endl;
+        cout << s << mp[s]<< endl;
        }
+
        mp[s]++;
+      
 
     }
     return 0;

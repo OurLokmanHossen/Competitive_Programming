@@ -1,31 +1,46 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+#define fastio() ios::sync_with_stdio(0); cin.tie(0);
+#define ll long long
 
-int main(){
+int main() {
+    fastio();
+    
+        int n; cin >> n;
 
-    int n ; cin >> n; int a[n];
+        vector<int> a(n);
 
-    int totalSum = 0;
+        for(int i = 0; i<n; i++) cin >> a[i];
 
-    for(int i = 0; i<n; i++ )
-    {
-        cin >> a[i];
-        totalSum += a[i];
-    }
+        sort(a.rbegin(), a.rend());
 
-    sort(a , a+n, greater<int>());
+        int total_sum = 0;
 
-        int my_sum = 0;
-        int coinCnt = 0;
-            for(int i = 0; i< n; i++)
+        for(int i = 0; i<n; i++)
+        {
+            total_sum += a[i];
+        }
+
+         int preSum = 0, cnt = 0;
+
+        for(int i = 0; i<n; i++)
+        {
+            preSum += a[i];
+            cnt++;
+
+            int remain_sum = total_sum - preSum;
+
+            if(preSum > remain_sum) 
             {
-                my_sum += a[i];
-                coinCnt++;
-                if(my_sum > totalSum - my_sum) break;
+                break;
             }
+        }
 
-            cout << coinCnt << endl;
-            
+
+        cout << cnt << endl;
+
+      
+      
+    
     return 0;
 }

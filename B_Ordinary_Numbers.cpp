@@ -6,14 +6,18 @@ int main(){
 
   int t; cin >> t;
   while(t--){
-    long long n; cin >> n;
+    
+    string s; cin >> s;
+ 
+   string rev = s;
 
-    for(int i = 1 ; i<n; i++)
-    {
-        
-    }
+   reverse(rev.begin(), rev.end());
 
+   int cnt = 0;
 
+   if(s == rev) cnt++;
+
+    cout << cnt << endl;
 
   }
     return 0;
